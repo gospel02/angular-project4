@@ -30,7 +30,6 @@ export class CourseInfoComponent {
 
   changeTee(chosenTee){
     this.tee = chosenTee;
-    console.log("Changed to tee #" + chosenTee);
   }
 
   loadPlayers() {
@@ -39,7 +38,6 @@ export class CourseInfoComponent {
 
   loadCourseTees() {
     this.courseInfoService.loadCourseInfo().subscribe(data => {
-      console.log(data);
       this.course = data['data'];
       this.tee = 0;
     });

@@ -45,11 +45,15 @@ export class PlayerInfoService {
           0
         ]
       };
-      this.players.doc(player.name).set(player).then(function (){console.log('player added!')} );
+      this.players.doc(player.name).set(player).then(function (){
+        
+      } );
     }
 
     deletePlayer(player){
-      this.players.doc(player.name).delete().then(function (){console.log('player deleted!')} );
+      this.players.doc(player.name).delete().then(function (){
+
+      } );
 
     }
 
