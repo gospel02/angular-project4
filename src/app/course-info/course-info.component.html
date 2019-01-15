@@ -39,7 +39,7 @@
           <div id='hcp'>{{hole.teeBoxes[this.tee].hcp}}</div>
           
           <div id="playerScores" *ngFor="let player of players">
-            <input id='scoreInput' [(ngModel)]="player.scoresOut[i]" type="number" 
+            <input id='scoreInput' min='0' max='99' [(ngModel)]="player.scoresOut[i]" type="number" 
                   (change)="totalScore(); saveScores(player)">
           </div>
         </div>

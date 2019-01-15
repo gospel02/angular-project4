@@ -13,8 +13,9 @@ import { PlayerInfoService } from "../player-info.service";
 
 
 export class CourseInfoComponent {
-  public course;
+  
   players: Array<PlayerInfo>;
+  public course;
   public tee;
 
   constructor(
