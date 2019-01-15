@@ -1,0 +1,25 @@
+#toolbar{
+  background-color: gray;
+}
+
+#header{
+  font-size: 30px;
+}
+
+#row{
+  justify-content:  center;
+}
+
+#button{
+  padding: 40px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#button:hover{
+  color: White;
+}
+
+
+

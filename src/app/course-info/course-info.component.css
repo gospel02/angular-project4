@@ -1,0 +1,122 @@
+#scorecard{
+  background-color: gray;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+}
+#courseHeader{
+  font-size: 30px;
+  margin: 10px;
+}
+
+#tees{
+  font-size: 15px;
+}
+
+#teesButton{
+  background-color: darkgray;
+  margin: 10px;
+  font-weight: bold;
+}
+
+#teesButton:hover{
+  color: white;
+}
+
+#frontNine{
+  display: flex;
+  background-color: darkgray;
+  margin: 10px;
+  margin-left: 100px;
+}
+
+#rowHeaders{
+  border: 1px solid;
+}
+
+#infoHeader{
+  width: 75px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#playerName{
+  width: 75px;
+  text-align: center;
+}
+
+#playerList{
+  margin: 2px;
+}
+
+#courseScore{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+#holes{
+  font-weight: bold;
+}
+
+#hcp{
+  margin-bottom: 18px;
+}
+
+#scoreInput{
+  width: 30px;
+}
+
+#backNine{
+  display: flex;
+  background-color: darkgray;
+  margin: 10px;
+  margin-left: 100px;
+}
+
+#row{
+  width: 40px;
+  border: 1px solid;
+}
+
+#column{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+ }
+
+ #outTotal{
+   padding-bottom: 77px;
+ }
+
+ #playerOutScores{
+   padding-bottom: 2px;
+ }
+
+ #column2{
+   display: flex;
+
+ }
+
+#inTotal{
+  display: flex;
+  flex-direction: column;
+}
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  

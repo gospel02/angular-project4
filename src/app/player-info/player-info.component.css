@@ -1,0 +1,57 @@
+ 
+
+ 
+   
+   #playerForm{
+    background: gray;
+    width: 25%;
+    margin: auto;
+    margin-top: 30px;
+
+   
+   }
+
+  
+
+   #deleteicon{
+     text-decoration: underline;
+     cursor: pointer;
+   }
+
+  #deleteicon:hover{
+    color: red;
+  }
+
+  #noPlayersAdded{
+    color: red;
+  }
+
+  #enteredPlayers{
+    text-decoration: underline;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #button:hover{
+    color: white;
+  }
+
+  #button{
+    background: darkgray;
+    
+  }
+
+  .buttonbottom{
+    margin-top: 20px;
+  }
+
+  .buttonplayer{
+    margin-left: 30px;
+  }
+
+
+
+
+
+ 
