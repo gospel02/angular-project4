@@ -45,8 +45,12 @@ export class CourseInfoComponent {
     });
   }
 
-  saveScores(player){
-    this.playerInfoService.updatePlayer(player);
+  yardsOut(yards){
+    let sum = 0;
+    for(let i = 0; i < 9; i++){
+      sum += yards[i];
+    }
+    return sum;
   }
 
   outTotal(player){
@@ -65,9 +69,7 @@ export class CourseInfoComponent {
     return sum;
   }
 
- 
-
-  totalOut(player){
+ totalOut(player){
     let sum = 0;
     for(let i = 0; i < 9; i++){
       sum += player[i];
@@ -81,6 +83,13 @@ export class CourseInfoComponent {
       sum += player[j];
     }
     return sum;
+  }
+
+
+
+
+  saveScores(player){
+    this.playerInfoService.updatePlayer(player);
   }
 
 }

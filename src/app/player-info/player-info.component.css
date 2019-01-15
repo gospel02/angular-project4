@@ -1,24 +1,15 @@
- 
-
- 
-   
-   #playerForm{
+  #playerForm{
     background: gray;
     width: 25%;
     margin: auto;
     margin-top: 30px;
+  }
 
-   
-   }
-
-  
-
-   #deleteicon{
-     text-decoration: underline;
+   #deleteIcon{
      cursor: pointer;
    }
 
-  #deleteicon:hover{
+  #deleteIcon:hover{
     color: red;
   }
 
@@ -27,10 +18,9 @@
   }
 
   #enteredPlayers{
-    text-decoration: underline;
-    text-align: left;
     margin-top: 5px;
     margin-bottom: 5px;
+    
   }
 
   #button:hover{
@@ -42,12 +32,25 @@
     
   }
 
-  .buttonbottom{
+  .buttonBottom{
     margin-top: 20px;
   }
 
-  .buttonplayer{
+  .buttonPlayer{
     margin-left: 30px;
+  }
+
+  #players{
+    display: flex;
+    justify-content: center;
+  }
+
+  #playersNumbers{
+    margin-top: 15px;
+  }
+
+  #name{
+    margin-bottom: 15px;
   }
 
 

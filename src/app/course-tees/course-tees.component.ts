@@ -7,8 +7,7 @@ import { CourseInfoService } from '../course-info.service';
   styleUrls: ['./course-tees.component.css']
 })
 export class CourseTeesComponent implements OnInit {
-  public course;
-  public tee;
+
   
 
   constructor(
@@ -16,14 +15,9 @@ export class CourseTeesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
-    
-  }
 
-  changeTee(chosenTee){
-    this.tee = chosenTee;
-    console.log("Changed to tee #" + chosenTee);
   }
-
 
 }
+
+

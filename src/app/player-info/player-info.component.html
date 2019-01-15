@@ -4,20 +4,39 @@
 
       <form id='playerInput'>
         <mat-form-field>
-          <input #playerName matInput placeholder="Enter Players Names" value="">
+          <input #playersName matInput placeholder="Enter Players Names" value="">
         </mat-form-field>
-        <button mat-raised-button id='button' class='buttonplayer' type="button" (click)="addPlayer(playerName.value); playerName.value=''">Add Player</button>
+        <button mat-raised-button id='button' class='buttonPlayer' type="button" (click)="addPlayer(playersName.value); playersName.value=''">Add Player</button>
       </form>
 
-        
-        <p id='enteredPlayers' *ngFor="let player of players">
-        <i id='deleteicon' class="material-icons" (click)="deletePlayer(player)">delete_outline</i>  
-          {{player.name}}
+      
+
+        <div id='players'>
+          <div id='playersNumbers'>
+            <div id='name'>Player 1 - </div>
+            <div id='name'>Player 2 - </div>
+            <div id='name'>Player 3 - </div>
+            <div id='name'>Player 4 - </div>
+          </div>
+          <div id='playersNames'>
+          <p id='enteredPlayers' *ngFor="let player of players">
+              
           
-        <div id='noPlayersAdded' *ngIf='(players)?.length === 0'>Add Players</div>
+            {{player.name}}
+          
+
+          <i id='deleteIcon' class="material-icons" (click)="deletePlayer(player)">delete_outline</i>
+          <div id='noPlayersAdded' *ngIf='(players)?.length === 0'>Add Players</div>  
+            
+          
+
+          </div>
+        </div>
+
+        
           
         <div>
-            <button mat-raised-button id='button' class='buttonbottom' [routerLink]="['/courseinfo']">Scorecard</button>
+            <button mat-raised-button id='button' class='buttonBottom' [routerLink]="['/courseinfo']">Scorecard</button>
     </div>
   </mat-card>
 </div>

@@ -48,15 +48,14 @@
       
       <div id='total'>
         <div id='column'>
-          <div id='outTotal' >Out Total</div>
-          <div id='playerOutTotals' *ngFor="let player of players">
-            <div id='playerOutScores'>{{outTotal(player.scoresOut)}}</div>
-            
+          <div id='totalHeader' >Out Total</div>
+          <div id='playerTotals' *ngFor="let player of players">
+            <div id='playerScores'>{{outTotal(player.scoresOut)}}</div>
           </div>
         </div>
       </div>
     </div>
-    <div>Back Nine</div>
+    <div id='backNineHeader'>Back Nine</div>
     <div id='backNine'>
         <div id='rowHeaders'>
           <div id='infoHeader'>Holes</div>
@@ -92,24 +91,22 @@
         
         <div id='total'>
           <div id='column2'>
-            <div id='inTotal'>In Total
-            <div id="playerInTotals" *ngFor="let player of players">
-               <div class="playerInScores">{{inTotal(player.scoresIn)}}</div>
+            <div id='totalHeader'>In Total</div>
+              <div id='playerTotals' *ngFor='let player of players'>
+               <div id='playerScores'>{{inTotal(player.scoresIn)}}</div>
             </div>
           </div>
-            
-            <div id="outInTotal">Total
-            <div id="playerTotals" *ngFor="let player of players">
-              <div class="playerTotalScores">{{totalOut(player.scoresOut) + totalIn(player.scoresIn)}}</div>
+        </div>
+
+        <div id='total'>
+          <div id='column'>        
+            <div id='totalHeader'>Total</div>
+              <div id='playerTotals' *ngFor='let player of players'>
+                <div id='playerScores'>{{totalOut(player.scoresOut) + totalIn(player.scoresIn)}}</div>
             </div>
-            </div>
-          
           </div>
         </div>
       </div>
   </div>
-
-
-
 </mat-card>
 
