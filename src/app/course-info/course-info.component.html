@@ -4,10 +4,10 @@
   
   <div>
     <div id='tees'>Choose Tees:</div>
-    <button mat-raised-button id='teesButton' (click)="changeTee(0)" val="1">Pro</button>
-    <button mat-raised-button id='teesButton' (click)="changeTee(1)" val="2">Champion</button>
-    <button mat-raised-button id='teesButton' (click)="changeTee(2)" val="3">Men's</button>
-    <button mat-raised-button id='teesButton' (click)="changeTee(3)" val="4">Women's</button>
+    <button mat-raised-button id='teesButton' (click)="selectTees(0)" val="1">Pro</button>
+    <button mat-raised-button id='teesButton'  (click)="selectTees(1)" val="2">Champion</button>
+    <button mat-raised-button id='teesButton' (click)="selectTees(2)" val="3">Men's</button>
+    <button mat-raised-button id='teesButton' (click)="selectTees(3)" val="4">Women's</button>
   </div>
   
   
@@ -40,7 +40,7 @@
           
           <div id="playerScores" *ngFor="let player of players">
             <input id='scoreInput' min='0' max='99' [(ngModel)]="player.scoresOut[i]" type="number" 
-                  (change)="totalScore(); saveScores(player)">
+                  (change)="totalScore(); saveScoresOut(player)">
           </div>
         </div>
       </div>
@@ -82,8 +82,8 @@
             <div id='hcp'>{{hole.teeBoxes[this.tee].hcp}}</div>
             
             <div id="playerScores" *ngFor="let player of players">
-              <input id='scoreInput'  [(ngModel)]="player.scoresIn[j]" type="number" 
-                    (change)="totalScore(); saveScores(player)">
+              <input id='scoreInput' min='0' max='99'  [(ngModel)]="player.scoresIn[j]" type="number" 
+                    (change)="totalScore(); saveScoresIn(player)">
             </div>
           </div>
         </div>

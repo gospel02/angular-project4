@@ -33,13 +33,15 @@ import {
   MatSnackBarModule
 } from '@angular/material';
 import { CourseTeesComponent } from './course-tees/course-tees.component';
+import { NamePipe } from './name.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseInfoComponent,
     PlayerInfoComponent,
-    CourseTeesComponent
+    CourseTeesComponent,
+    NamePipe
   ],
   imports: [
     BrowserModule,

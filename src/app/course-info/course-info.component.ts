@@ -29,8 +29,8 @@ export class CourseInfoComponent {
     this.loadCourseTees();
   }
 
-  changeTee(chosenTee){
-    this.tee = chosenTee;
+  selectTees(SelectedTees){
+    this.tee = SelectedTees;
   }
 
   loadPlayers() {
@@ -40,17 +40,11 @@ export class CourseInfoComponent {
   loadCourseTees() {
     this.courseInfoService.loadCourseInfo().subscribe(data => {
       this.course = data['data'];
-      this.tee = 0;
+      this.tee = '1';
     });
   }
 
-  yardsOut(yards){
-    let sum = 0;
-    for(let i = 0; i < 9; i++){
-      sum += yards[i];
-    }
-    return sum;
-  }
+ 
 
   outTotal(player){
     let sum = 0;
@@ -87,8 +81,15 @@ export class CourseInfoComponent {
 
 
 
-  saveScores(player){
+  saveScoresOut(player){
+    this.playerInfoService.updatePlayer(player);
+  }
+
+  saveScoresIn(player){
     this.playerInfoService.updatePlayer(player);
   }
 
 }
+
+
+
