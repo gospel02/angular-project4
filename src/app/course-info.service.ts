@@ -11,12 +11,12 @@ export class CourseInfoService {
   
   constructor(private httpClient: HttpClient) { }
 
-  loadCoursesInfo(){
+  loadCoursesInfo(): Observable<any>{
     return this.httpClient.get('https://golf-courses-api.herokuapp.com/courses');
 
   }
 
-  loadCourseInfo(){
+  loadCourseInfo(): Observable<any>{
     return this.httpClient.get('https://golf-courses-api.herokuapp.com/courses/11819');
   }
 

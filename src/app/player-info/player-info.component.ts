@@ -26,10 +26,11 @@ export class PlayerInfoComponent implements OnInit {
 
   addPlayer(name: string) {
     let sameName: boolean;
-    if (sameName){
-      alert('Duplicate Name');
-    }else{
+    if (sameName == false){
       this.playerService.addPlayer(name);
+    }else{
+      this.playerService.addPlayer(name='Happy Gilmore');
+      
       
     }
 
