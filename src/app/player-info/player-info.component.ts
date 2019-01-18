@@ -12,7 +12,7 @@ export class PlayerInfoComponent implements OnInit {
   players: Array<PlayerInfo>;
 
   constructor(
-    private playerService: PlayerInfoService,
+    private playerInfoService: PlayerInfoService,
     ) {
   }
 
@@ -21,15 +21,15 @@ export class PlayerInfoComponent implements OnInit {
   }
 
   loadPlayers() {
-    this.playerService.loadPlayers().subscribe(players => this.players = players)
+    this.playerInfoService.loadPlayers().subscribe(players => this.players = players)
   }
 
   addPlayer(name: string) {
     let sameName: any;
     if (!sameName == true){
-      this.playerService.addPlayer(name);
+      this.playerInfoService.addPlayer(name);
     }else{
-      this.playerService.addPlayer(name='Happy Gilmore');
+      this.playerInfoService.addPlayer(name='Happy Gilmore');
       
       
     }
@@ -38,6 +38,6 @@ export class PlayerInfoComponent implements OnInit {
   }
 
   deletePlayer(player) {
-    this.playerService.deletePlayer(player);
+    this.playerInfoService.deletePlayer(player);
   }
 }

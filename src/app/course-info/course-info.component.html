@@ -1,6 +1,6 @@
 <mat-card id='scorecard'>
 
-  <div id='courseHeader'>{{course.name}}</div>
+  <div id='courseHeader'>{{course?.name}}</div>
   
   <div>
     <div id='tees'>Choose Tees:</div>
@@ -10,9 +10,19 @@
     <button mat-raised-button id='teesButton' (click)="selectTees(3)" val="4">Women's</button>
   </div>
   
+  <span id='header'>Selected tees - </span>
+  <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeType}}</span>
+  <br>
+  <span id='header'>Tee color - </span>
+  <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeColorType}}</span>
+  <br>
+  <span>{{course?.holes[1].teeBoxes[this.selectedTee].yards +
+      course?.holes[2].teeBoxes[this.selectedTee].yards}}
+  </span>
+  
   
   <div id='cardInfo'>
-    <div>Front Nine</div>
+    <div id='header'>Front Nine</div>
     <div id='frontNine'>
       <div id='rowHeaders'>
         <div id='infoHeader'>Holes</div>
@@ -31,12 +41,12 @@
       </div>
       
       <div id='courseScore'>
-        <div id='row' *ngFor="let hole of course.holes.slice(0,9); let i = index">
+        <div id='row' *ngFor="let hole of course?.holes.slice(0,9); let i = index">
             
           <div id='holes'>{{hole.hole}}</div>
-          <div id='yardage'>{{hole.teeBoxes[this.tee].yards}}</div>
-          <div id='par'>{{hole.teeBoxes[this.tee].par}}</div>
-          <div id='hcp'>{{hole.teeBoxes[this.tee].hcp}}</div>
+          <div id='yardage'>{{hole.teeBoxes[this.selectedTee].yards}}</div>
+          <div id='par'>{{hole.teeBoxes[this.selectedTee].par}}</div>
+          <div id='hcp'>{{hole.teeBoxes[this.selectedTee].hcp}}</div>
           
           <div id="playerScores" *ngFor="let player of players">
             <input id='scoreInput' min='0' max='99' [(ngModel)]="player.scoresOut[i]" type="number" 
@@ -74,12 +84,12 @@
         </div>
         
         <div id='courseScore'>
-          <div id='row' *ngFor="let hole of course.holes.slice(9,18); let j = index">
+          <div id='row' *ngFor="let hole of course?.holes.slice(9,18); let j = index">
               
             <div id='holes'>{{hole.hole}}</div>
-            <div id='yardage'>{{hole.teeBoxes[this.tee].yards}}</div>
-            <div id='par'>{{hole.teeBoxes[this.tee].par}}</div>
-            <div id='hcp'>{{hole.teeBoxes[this.tee].hcp}}</div>
+            <div id='yardage'>{{hole.teeBoxes[this.selectedTee].yards}}</div>
+            <div id='par'>{{hole.teeBoxes[this.selectedTee].par}}</div>
+            <div id='hcp'>{{hole.teeBoxes[this.selectedTee].hcp}}</div>
             
             <div id="playerScores" *ngFor="let player of players">
               <input id='scoreInput' min='0' max='99'  [(ngModel)]="player.scoresIn[j]" type="number" 

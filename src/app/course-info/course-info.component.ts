@@ -16,7 +16,7 @@ export class CourseInfoComponent {
   
   players: Array<PlayerInfo>;
   public course;
-  public tee;
+  public selectedTee;
 
   constructor(
     private playerInfoService: PlayerInfoService,
@@ -30,7 +30,7 @@ export class CourseInfoComponent {
   }
 
   selectTees(SelectedTees){
-    this.tee = SelectedTees;
+    this.selectedTee = SelectedTees;
   }
 
   loadPlayers() {
@@ -40,7 +40,7 @@ export class CourseInfoComponent {
   loadCourseTees() {
     this.courseInfoService.loadCourseInfo().subscribe(data => {
       this.course = data['data'];
-      this.tee = '1';
+      this.selectedTee = '1';
     });
   }
 
@@ -78,11 +78,14 @@ export class CourseInfoComponent {
     return sum;
   }
 
+  totalScore(){}
 
 
 
-  saveScoresOut(player){
+
+  saveScoresOut(player){console.log(player)
     this.playerInfoService.updatePlayer(player);
+    
   }
 
   saveScoresIn(player){

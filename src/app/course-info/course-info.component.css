@@ -12,6 +12,7 @@
 
 #tees{
   font-size: 15px;
+  font-weight:bold;
 }
 
 #teesButton{
@@ -20,13 +21,22 @@
   font-weight: bold;
 }
 
+#header{
+  font-weight: bold;
+}
+
 #teesButton:hover{
   color: white;
+}
+
+#cardInfo{
+  margin-top: 10px;
 }
 
 #frontNine{
   display: flex;
   justify-content: center;
+  
 }
 
 #rowHeaders{
@@ -74,6 +84,7 @@
 
 #backNineHeader{
   margin-top: 10px;
+  font-weight: bold;
 }
 
 #backNine{
