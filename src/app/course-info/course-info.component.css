@@ -133,6 +133,19 @@
    padding-bottom: 5px;
  }
 
+ #button:hover{
+  color: white;
+}
+
+#button{
+  background: darkgray;
+  
+}
+
+.buttonBottom{
+  margin-top: 20px;
+}
+
 
 
 

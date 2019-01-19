@@ -86,7 +86,7 @@ export class CourseInfoComponent {
 
   }
 
-  saveScoresOut(player){console.log(player)
+  saveScoresOut(player){
     this.playerInfoService.updatePlayer(player);
     
   }

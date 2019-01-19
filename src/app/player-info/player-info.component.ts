@@ -25,19 +25,11 @@ export class PlayerInfoComponent implements OnInit {
   }
 
   addPlayer(name: string) {
-    let sameName: any;
-    if (!sameName == true){
-      this.playerInfoService.addPlayer(name);
-    }else{
-      this.playerInfoService.addPlayer(name='Happy Gilmore');
-      
-      
-    }
-
-
+    this.playerInfoService.addPlayer(name);
   }
 
-  deletePlayer(player) {
-    this.playerInfoService.deletePlayer(player);
+      
+    removePlayer(player) {
+    this.playerInfoService.removePlayer(player);
   }
 }

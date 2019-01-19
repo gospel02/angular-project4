@@ -8,6 +8,10 @@
     margin-top: 30px;
   }
 
+  #playerInput{
+    display: flex;
+  }
+
    #deleteIcon{
      cursor: pointer;
    }

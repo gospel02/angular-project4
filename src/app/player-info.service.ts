@@ -50,7 +50,7 @@ export class PlayerInfoService {
       } );
     }
 
-    deletePlayer(player){
+    removePlayer(player){
       this.players.doc(player.name).delete().then(function (){
 
       } );

@@ -2,12 +2,14 @@
 <div id='container'>
   <mat-card id='playerForm'>
 
-      <form id='playerInput'>
-        <mat-form-field>
+      <div id='playerInput'>
+        <div>
           <input #playerInput Input placeholder="Enter Players Names" value="">
-        </mat-form-field>
+        </div>
+        <div>
         <button mat-raised-button id='button' class='buttonPlayer' type="button" (click)="addPlayer(playerInput.value); playerInput.value=''">Add Player</button>
-      </form>
+        </div>
+      </div>
 
       
 
@@ -25,7 +27,7 @@
             {{player.name}}
           
 
-          <i id='deleteIcon' class="material-icons" (click)="deletePlayer(player)">delete_outline</i>
+          <i id='deleteIcon' class="material-icons" (click)="removePlayer(player)">delete_outline</i>
             </p>
             </div>
         </div>
