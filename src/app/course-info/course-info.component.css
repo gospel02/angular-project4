@@ -115,15 +115,22 @@
  }
 
  #totalHeader{
-   padding-bottom: 82px;
    font-weight: bold;
    width: 70px;
+ }
+
+ #totalPar{
+   padding-bottom: 40px;
  }
 
  #playerScores{
    padding-bottom: 2px;
    display: flex;
    flex-direction: column;
+ }
+
+ #playerTotalScores{
+   padding-bottom: 5px;
  }
 
 

@@ -4,9 +4,9 @@
 
       <form id='playerInput'>
         <mat-form-field>
-          <input #playersName matInput placeholder="Enter Players Names" value="">
+          <input #playerInput matInput placeholder="Enter Players Names" value="">
         </mat-form-field>
-        <button mat-raised-button id='button' class='buttonPlayer' type="button" (click)="addPlayer(playersName.value); playersName.value=''">Add Player</button>
+        <button mat-raised-button id='button' class='buttonPlayer' type="button" (click)="addPlayer(playerInput.value); playerInput.value=''">Add Player</button>
       </form>
 
       
@@ -26,7 +26,7 @@
           
 
           <i id='deleteIcon' class="material-icons" (click)="deletePlayer(player)">delete_outline</i>
-           
+            </p>
             </div>
         </div>
 

@@ -15,11 +15,6 @@
   <br>
   <span id='header'>Tee color - </span>
   <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeColorType}}</span>
-  <br>
-  <span>{{course?.holes[1].teeBoxes[this.selectedTee].yards +
-      course?.holes[2].teeBoxes[this.selectedTee].yards}}
-  </span>
-  
   
   <div id='cardInfo'>
     <div id='header'>Front Nine</div>
@@ -50,7 +45,7 @@
           
           <div id="playerScores" *ngFor="let player of players">
             <input id='scoreInput' min='0' max='99' [(ngModel)]="player.scoresOut[i]" type="number" 
-                  (change)="totalScore(); saveScoresOut(player)">
+                  (change)="totalScoreOut(); saveScoresOut(player)">
           </div>
         </div>
       </div>
@@ -59,8 +54,28 @@
       <div id='total'>
         <div id='column'>
           <div id='totalHeader' >Out Total</div>
+          <div>{{course?.holes[0].teeBoxes[this.selectedTee].yards +
+              course?.holes[1].teeBoxes[this.selectedTee].yards +
+              course?.holes[2].teeBoxes[this.selectedTee].yards +
+              course?.holes[3].teeBoxes[this.selectedTee].yards +
+              course?.holes[4].teeBoxes[this.selectedTee].yards +
+              course?.holes[5].teeBoxes[this.selectedTee].yards +
+              course?.holes[6].teeBoxes[this.selectedTee].yards +
+              course?.holes[7].teeBoxes[this.selectedTee].yards +
+              course?.holes[8].teeBoxes[this.selectedTee].yards}}
+          </div>
+          <div id='totalPar'>{{course?.holes[0].teeBoxes[this.selectedTee].par +
+              course?.holes[1].teeBoxes[this.selectedTee].par +
+              course?.holes[2].teeBoxes[this.selectedTee].par +
+              course?.holes[3].teeBoxes[this.selectedTee].par +
+              course?.holes[4].teeBoxes[this.selectedTee].par +
+              course?.holes[5].teeBoxes[this.selectedTee].par +
+              course?.holes[6].teeBoxes[this.selectedTee].par +
+              course?.holes[7].teeBoxes[this.selectedTee].par +
+              course?.holes[8].teeBoxes[this.selectedTee].par}}
+          </div>
           <div id='playerTotals' *ngFor="let player of players">
-            <div id='playerScores'>{{outTotal(player.scoresOut)}}</div>
+            <div id='playerTotalScores'>{{outTotal(player.scoresOut)}}</div>
           </div>
         </div>
       </div>
@@ -93,7 +108,7 @@
             
             <div id="playerScores" *ngFor="let player of players">
               <input id='scoreInput' min='0' max='99'  [(ngModel)]="player.scoresIn[j]" type="number" 
-                    (change)="totalScore(); saveScoresIn(player)">
+                    (change)="totalScoreIn(); saveScoresIn(player)">
             </div>
           </div>
         </div>
@@ -102,8 +117,28 @@
         <div id='total'>
           <div id='column2'>
             <div id='totalHeader'>In Total</div>
+            <div>{{course?.holes[9].teeBoxes[this.selectedTee].yards +
+                course?.holes[10].teeBoxes[this.selectedTee].yards +
+                course?.holes[11].teeBoxes[this.selectedTee].yards +
+                course?.holes[12].teeBoxes[this.selectedTee].yards +
+                course?.holes[13].teeBoxes[this.selectedTee].yards +
+                course?.holes[14].teeBoxes[this.selectedTee].yards +
+                course?.holes[15].teeBoxes[this.selectedTee].yards +
+                course?.holes[16].teeBoxes[this.selectedTee].yards +
+                course?.holes[17].teeBoxes[this.selectedTee].yards}}
+            </div>
+            <div id='totalPar'>{{course?.holes[9].teeBoxes[this.selectedTee].par +
+                course?.holes[10].teeBoxes[this.selectedTee].par +
+                course?.holes[11].teeBoxes[this.selectedTee].par +
+                course?.holes[12].teeBoxes[this.selectedTee].par +
+                course?.holes[13].teeBoxes[this.selectedTee].par +
+                course?.holes[14].teeBoxes[this.selectedTee].par +
+                course?.holes[15].teeBoxes[this.selectedTee].par +
+                course?.holes[16].teeBoxes[this.selectedTee].par +
+                course?.holes[17].teeBoxes[this.selectedTee].par}}
+            </div>
               <div id='playerTotals' *ngFor='let player of players'>
-               <div id='playerScores'>{{inTotal(player.scoresIn)}}</div>
+               <div id='playerTotalScores'>{{inTotal(player.scoresIn)}}</div>
             </div>
           </div>
         </div>
@@ -111,8 +146,46 @@
         <div id='total'>
           <div id='column'>        
             <div id='totalHeader'>Total</div>
+            <div>{{course?.holes[0].teeBoxes[this.selectedTee].yards +
+                course?.holes[1].teeBoxes[this.selectedTee].yards +
+                course?.holes[2].teeBoxes[this.selectedTee].yards +
+                course?.holes[3].teeBoxes[this.selectedTee].yards +
+                course?.holes[4].teeBoxes[this.selectedTee].yards +
+                course?.holes[5].teeBoxes[this.selectedTee].yards +
+                course?.holes[6].teeBoxes[this.selectedTee].yards +
+                course?.holes[7].teeBoxes[this.selectedTee].yards +
+                course?.holes[8].teeBoxes[this.selectedTee].yards +
+                course?.holes[9].teeBoxes[this.selectedTee].yards +
+                course?.holes[10].teeBoxes[this.selectedTee].yards +
+                course?.holes[11].teeBoxes[this.selectedTee].yards +
+                course?.holes[12].teeBoxes[this.selectedTee].yards +
+                course?.holes[13].teeBoxes[this.selectedTee].yards +
+                course?.holes[14].teeBoxes[this.selectedTee].yards +
+                course?.holes[15].teeBoxes[this.selectedTee].yards +
+                course?.holes[16].teeBoxes[this.selectedTee].yards +
+                course?.holes[17].teeBoxes[this.selectedTee].yards}}
+            </div>
+            <div id='totalPar'>{{course?.holes[0].teeBoxes[this.selectedTee].par +
+                course?.holes[1].teeBoxes[this.selectedTee].par +
+                course?.holes[2].teeBoxes[this.selectedTee].par +
+                course?.holes[3].teeBoxes[this.selectedTee].par +
+                course?.holes[4].teeBoxes[this.selectedTee].par +
+                course?.holes[5].teeBoxes[this.selectedTee].par +
+                course?.holes[6].teeBoxes[this.selectedTee].par +
+                course?.holes[7].teeBoxes[this.selectedTee].par +
+                course?.holes[8].teeBoxes[this.selectedTee].par +
+                course?.holes[9].teeBoxes[this.selectedTee].par +
+                course?.holes[10].teeBoxes[this.selectedTee].par +
+                course?.holes[11].teeBoxes[this.selectedTee].par +
+                course?.holes[12].teeBoxes[this.selectedTee].par +
+                course?.holes[13].teeBoxes[this.selectedTee].par +
+                course?.holes[14].teeBoxes[this.selectedTee].par +
+                course?.holes[15].teeBoxes[this.selectedTee].par +
+                course?.holes[16].teeBoxes[this.selectedTee].par +
+                course?.holes[17].teeBoxes[this.selectedTee].par}}
+            </div>
               <div id='playerTotals' *ngFor='let player of players'>
-                <div id='playerScores'>{{totalOut(player.scoresOut) + totalIn(player.scoresIn)}}</div>
+                <div id='playerTotalScores'>{{totalOut(player.scoresOut) + totalIn(player.scoresIn)}}</div>
             </div>
           </div>
         </div>

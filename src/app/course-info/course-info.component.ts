@@ -78,10 +78,13 @@ export class CourseInfoComponent {
     return sum;
   }
 
-  totalScore(){}
+  totalScoreOut(){
 
+  }
 
+  totalScoreIn(){
 
+  }
 
   saveScoresOut(player){console.log(player)
     this.playerInfoService.updatePlayer(player);
