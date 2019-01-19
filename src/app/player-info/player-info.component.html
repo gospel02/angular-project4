@@ -3,11 +3,11 @@
   <mat-card id='playerForm'>
 
       <div id='playerInput'>
-        <div>
+        <div id='playerInputName'>
           <input #playerInput Input placeholder="Enter Players Names" value="">
         </div>
         <div>
-        <button mat-raised-button id='button' class='buttonPlayer' type="button" (click)="addPlayer(playerInput.value); playerInput.value=''">Add Player</button>
+        <button mat-raised-button id='button' class='buttonPlayer' type='button' (click)="addPlayer(playerInput.value); playerInput.value=''">Add Player</button>
         </div>
       </div>
 
@@ -21,13 +21,13 @@
             <div id='name'>Player 4 - </div>
           </div>
           <div id='playersNames'>
-          <p id='enteredPlayers' *ngFor="let player of players">
+          <p id='enteredPlayers' *ngFor='let player of players'>
               
           
             {{player.name}}
           
 
-          <i id='deleteIcon' class="material-icons" (click)="removePlayer(player)">delete_outline</i>
+          <i id='deleteIcon' class='material-icons' (click)="removePlayer(player)">delete_outline</i>
             </p>
             </div>
         </div>
