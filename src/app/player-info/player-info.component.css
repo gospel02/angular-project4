@@ -1,7 +1,10 @@
+  #container{
+    width: 400px;
+    margin: auto;
+  }
+  
   #playerForm{
     background: gray;
-    width: 25%;
-    margin: auto;
     margin-top: 30px;
   }
 
