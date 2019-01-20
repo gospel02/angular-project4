@@ -20,15 +20,11 @@
             <div id='name'>Player 3 - </div>
             <div id='name'>Player 4 - </div>
           </div>
-          <div id='playersNames'>
-          <p id='enteredPlayers' *ngFor='let player of players'>
-              
-          
-            {{player.name}}
-          
-
-          <i id='deleteIcon' class='material-icons' (click)="removePlayer(player)">delete_outline</i>
-            </p>
+            <div id='playersNames'>
+              <div id='enteredPlayers' *ngFor='let player of players'>
+                  {{player.name}}
+              <i id='deleteIcon' class='material-icons' (click)="removePlayer(player)">delete_outline</i>
+              </div>
             </div>
         </div>
 
