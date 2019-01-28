@@ -4,17 +4,21 @@
   
   <div>
     <div id='tees'>Choose Tees:</div>
-    <button mat-raised-button id='teesButton' (click)='selectTees(0)' val='1'>Pro</button>
-    <button mat-raised-button id='teesButton'  (click)='selectTees(1)' val='2'>Champion</button>
-    <button mat-raised-button id='teesButton' (click)='selectTees(2)' val='3'>Men's</button>
-    <button mat-raised-button id='teesButton' (click)='selectTees(3)' val='4'>Women's</button>
+    <button mat-raised-button id='teesButton' (click)='selectTees(0)'
+     val='1'>{{course?.holes[0].teeBoxes[0].teeType | titlecase}}</button>
+    <button mat-raised-button id='teesButton'  (click)='selectTees(1)'
+     val='2'>{{course?.holes[1].teeBoxes[1].teeType | titlecase}}</button>
+    <button mat-raised-button id='teesButton' (click)='selectTees(2)'
+     val='3'>{{course?.holes[1].teeBoxes[2].teeType | titlecase}}</button>
+    <button mat-raised-button id='teesButton' (click)='selectTees(3)'
+     val='4'>{{course?.holes[1].teeBoxes[3].teeType | titlecase}}</button>
   </div>
   
   <span id='header'>Selected tees - </span>
-  <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeType}}</span>
+  <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeType | titlecase}}</span>
   <br>
   <span id='header'>Tee color - </span>
-  <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeColorType}}</span>
+  <span id='header'>{{course?.holes[1].teeBoxes[this.selectedTee].teeColorType | titlecase}}</span>
   
   <div id='cardInfo'>
     <div id='header'>Front Nine</div>
@@ -29,7 +33,7 @@
         <div id='playersName'>
           <div *ngFor='let player of players'>
             <div id='playerList'>
-              {{player.name}}
+              {{player.name | titlecase}}
             </div>
           </div>
         </div>
@@ -92,7 +96,7 @@
           <div id='playersName'>
             <div *ngFor='let player of players'>
               <div id='playerList'>
-                {{player.name}}
+                {{player.name | titlecase}}
               </div>
             </div>
           </div>
