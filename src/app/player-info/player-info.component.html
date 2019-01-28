@@ -22,7 +22,7 @@
           </div>
             <div id='playersNames'>
               <div id='enteredPlayers' *ngFor='let player of players'>
-                  {{player.name}}
+                  {{player.name | titlecase}}
               <i id='deleteIcon' class='material-icons' (click)="removePlayer(player)">delete_outline</i>
               </div>
             </div>
