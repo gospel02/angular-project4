@@ -10,14 +10,21 @@ import { CourseInfoService } from "../course-info.service";
 })
 export class PlayerInfoComponent implements OnInit {
   players: Array<PlayerInfo>;
+  public golfCourses;
+  public selectedcourse;
 
   constructor(
     private playerInfoService: PlayerInfoService,
+    private courseInfoService: CourseInfoService
     ) {
   }
 
   ngOnInit() {
     this.loadPlayers();
+  }
+
+  loadCourses(){
+    this.courseInfoService.loadCoursesInfo().subscribe(golfCourses => this.golfCourses = golfCourses.courses);
   }
 
   loadPlayers() {

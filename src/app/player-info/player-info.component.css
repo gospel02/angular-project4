@@ -12,6 +12,10 @@
     display: flex;
   }
 
+  #input{
+    height: 30px;
+  }
+
    #deleteIcon{
      cursor: pointer;
    }

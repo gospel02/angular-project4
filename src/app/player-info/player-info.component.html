@@ -2,9 +2,11 @@
 <div id='container'>
   <mat-card id='playerForm'>
 
+
+
       <div id='playerInput'>
         <div id='playerInputName'>
-          <input #playerInput Input placeholder="Enter Players Names" value="">
+          <input id='input' #playerInput Input placeholder="Enter Players Names" value="">
         </div>
         <div>
         <button mat-raised-button id='button' class='buttonPlayer' type='button' (click)="addPlayer(playerInput.value); playerInput.value=''">Add Player</button>
