@@ -56,12 +56,29 @@ export class CourseInfoComponent {
     return sum;
   }
 
+  totalScoreOut(){
+
+  }
+
+  saveScoresOut(player){
+    this.playerInfoService.updatePlayerInfo(player);
+    
+  }
+
   inTotal(player){
     let sum = 0;
     for(let j = 0; j < 9; j++){
       sum += player[j];
     }
     return sum;
+  }
+
+  totalScoreIn(){
+
+  }
+
+  saveScoresIn(player){
+    this.playerInfoService.updatePlayerInfo(player);
   }
 
  totalOut(player){
@@ -80,22 +97,9 @@ export class CourseInfoComponent {
     return sum;
   }
 
-  totalScoreOut(){
+ 
 
-  }
 
-  saveScoresOut(player){
-    this.playerInfoService.updatePlayerInfo(player);
-    
-  }
-
-  totalScoreIn(){
-
-  }
-
-  saveScoresIn(player){
-    this.playerInfoService.updatePlayerInfo(player);
-  }
 
 }
 

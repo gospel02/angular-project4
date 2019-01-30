@@ -25,11 +25,11 @@
     <div id='header'>Front Nine</div>
     <div id='frontNine'>
       <div id='rowHeaders'>
-        <div id='infoHeader'>Holes</div>
+        <div id='infoHeaderTop'>Holes</div>
         <div id='infoHeader'>Yardage</div>
         <div id='infoHeader'>Par</div>
-        <div id='infoHeader'>Handicap</div>
-        <div id='infoHeader' class='headerPlayers'>Players</div>
+        <div id='infoHeaderBottom'>Handicap</div>
+        
         
         <div id='playersName'>
           <div *ngFor='let player of players'>
@@ -49,8 +49,10 @@
           <div id='hcp'>{{hole.teeBoxes[this.selectedTee].hcp}}</div>
           
           <div id='playerScores' *ngFor='let player of players'>
-            <input id='scoreInput' min='0' max='99' [(ngModel)]='player.scoresOut[i]' type='number' 
-                  (change)='totalScoreOut(); saveScoresOut(player)'>
+            <input matInput id='scoreInput' min='0' max='99'
+             [(ngModel)]='player.scoresOut[i]' type='number' 
+                  (change)='totalScoreOut();
+                       saveScoresOut(player) '>
           </div>
         </div>
       </div>
@@ -88,11 +90,11 @@
     <div id='backNineHeader'>Back Nine</div>
     <div id='backNine'>
         <div id='rowHeaders'>
-          <div id='infoHeader'>Holes</div>
+          <div id='infoHeaderTop'>Holes</div>
           <div id='infoHeader'>Yardage</div>
           <div id='infoHeader'>Par</div>
-          <div id='infoHeader'>Handicap</div>
-          <div id='infoHeader' class='headerPlayers'>Players</div>
+          <div id='infoHeaderBottom'>Handicap</div>
+          
           
           <div id='playersName'>
             <div *ngFor='let player of players'>
@@ -112,8 +114,10 @@
             <div id='hcp'>{{hole.teeBoxes[this.selectedTee].hcp}}</div>
             
             <div id='playerScores' *ngFor='let player of players'>
-              <input id='scoreInput' min='0' max='99'  [(ngModel)]='player.scoresIn[j]' type='number' 
-                    (change)='totalScoreIn(); saveScoresIn(player)'>
+              <input matInput id='scoreInput' min='0' max='99'  
+              [(ngModel)]='player.scoresIn[j]' type='number' 
+                    (change)='totalScoreIn();
+                         saveScoresIn(player)'>
             </div>
           </div>
         </div>
@@ -190,14 +194,16 @@
                 course?.holes[17].teeBoxes[this.selectedTee].par}}
             </div>
               <div id='playerTotals' *ngFor='let player of players'>
-                <div id='playerTotalScores'>{{totalOut(player.scoresOut) + totalIn(player.scoresIn)}}</div>
+                <div id='playerTotalScores'>{{totalOut(player.scoresOut) +
+                   totalIn(player.scoresIn)}}</div>
             </div>
           </div>
         </div>
       </div>
   </div>
   <div>
-    <button mat-raised-button id='button' class='buttonBottom' [routerLink]="['/playerinfo']">Edit Players</button>
+    <button mat-raised-button id='button' class='buttonBottom'
+     [routerLink]="['/playerinfo']">Edit Players</button>
 </div>
 </mat-card>
 

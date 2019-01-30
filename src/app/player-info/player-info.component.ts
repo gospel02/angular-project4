@@ -27,7 +27,8 @@ export class PlayerInfoComponent implements OnInit {
   }
 
   loadPlayers() {
-    this.playerInfoService.loadPlayers().subscribe(players => this.players = players)
+    this.playerInfoService.loadPlayers()
+    .subscribe(players => this.players = players)
   }
 
   playersEntered(name: string) {

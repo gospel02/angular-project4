@@ -6,8 +6,8 @@
   border-radius: 10px;
 }
 #courseHeader{
-  font-size: 30px;
-  margin: 10px;
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
 #tees{
@@ -47,19 +47,34 @@
   border-bottom-left-radius: 5px;
 }
 
+#infoHeaderTop{
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid;
+
+}
+
 #infoHeader{
   width: 75px;
   text-align: left;
   font-weight: bold;
 }
 
+#infoHeaderBottom{
+ 
+  text-align: left;
+  font-weight: bold;
+}
+
 #playerName{
   width: 75px;
+  
   text-align: center;
 }
 
 #playerList{
-  margin: 4px;
+  margin: 5px;
+  
 }
 
 #courseScore{
@@ -72,10 +87,11 @@
 
 #holes{
   font-weight: bold;
+  border-bottom: 2px solid;
 }
 
 #hcp{
-  margin-bottom: 18px;
+  margin-bottom: 3px;
 }
 
 #scoreInput{
@@ -117,16 +133,18 @@
  #totalHeader{
    font-weight: bold;
    width: 70px;
+   border-bottom: 2px solid;
  }
 
  #totalPar{
-   padding-bottom: 40px;
+   padding-bottom: 25px;
  }
 
  #playerScores{
    padding-bottom: 2px;
    display: flex;
    flex-direction: column;
+   
  }
 
  #playerTotalScores{
@@ -139,6 +157,8 @@
 
 #button{
   background: darkgray;
+  font-weight: bold;
+  
   
 }
 
