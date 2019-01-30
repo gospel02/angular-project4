@@ -2,16 +2,17 @@
 
   <div id='courseHeader'>{{course?.name}}</div>
   
+  
   <div>
     <div id='tees'>Choose Tees:</div>
     <button mat-raised-button id='teesButton' (click)='selectTees(0)'
-     val='1'>{{course?.holes[0].teeBoxes[0].teeType | titlecase}}</button>
+     val='pro'>{{course?.holes[0].teeBoxes[0].teeType | titlecase}}</button>
     <button mat-raised-button id='teesButton'  (click)='selectTees(1)'
-     val='2'>{{course?.holes[1].teeBoxes[1].teeType | titlecase}}</button>
+     val='champion'>{{course?.holes[1].teeBoxes[1].teeType | titlecase}}</button>
     <button mat-raised-button id='teesButton' (click)='selectTees(2)'
-     val='3'>{{course?.holes[1].teeBoxes[2].teeType | titlecase}}</button>
+     val='men'>{{course?.holes[1].teeBoxes[2].teeType | titlecase}}</button>
     <button mat-raised-button id='teesButton' (click)='selectTees(3)'
-     val='4'>{{course?.holes[1].teeBoxes[3].teeType | titlecase}}</button>
+     val='women'>{{course?.holes[1].teeBoxes[3].teeType | titlecase}}</button>
   </div>
   
   <span id='header'>Selected Tees - </span>

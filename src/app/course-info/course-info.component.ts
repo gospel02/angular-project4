@@ -16,7 +16,9 @@ export class CourseInfoComponent {
   
   players: Array<PlayerInfo>;
   public course;
+  public courseID;
   public selectedTee;
+  
 
   constructor(
     private playerInfoService: PlayerInfoService,
@@ -82,17 +84,17 @@ export class CourseInfoComponent {
 
   }
 
+  saveScoresOut(player){
+    this.playerInfoService.updatePlayerInfo(player);
+    
+  }
+
   totalScoreIn(){
 
   }
 
-  saveScoresOut(player){
-    this.playerInfoService.updatePlayer(player);
-    
-  }
-
   saveScoresIn(player){
-    this.playerInfoService.updatePlayer(player);
+    this.playerInfoService.updatePlayerInfo(player);
   }
 
 }

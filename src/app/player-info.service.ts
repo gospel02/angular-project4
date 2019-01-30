@@ -11,15 +11,15 @@ export class PlayerInfoService {
   private players: AngularFirestoreCollection<PlayerInfo>;
 
 
-  constructor(db: AngularFirestore) {
-    this.players = db.collection<PlayerInfo>('players');
+  constructor(afs: AngularFirestore) {
+    this.players = afs.collection<PlayerInfo>('players');
   }
 
   loadPlayers(): Observable<PlayerInfo[]> {
     return this.players.valueChanges();
       }
 
-    addPlayer(name: string){
+    playersEntered(name: string){
       let player = {
         name: name,
         scoresOut: [
@@ -57,7 +57,7 @@ export class PlayerInfoService {
 
     }
 
-    updatePlayer(player){
+    updatePlayerInfo(player){
       this.players.doc(player.name).set(player);
     }
 }
