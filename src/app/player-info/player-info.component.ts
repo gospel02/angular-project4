@@ -24,6 +24,7 @@ export class PlayerInfoComponent implements OnInit {
 
   ngOnInit() {
     this.loadPlayers();
+   
   }
 
   loadPlayers() {
@@ -31,12 +32,12 @@ export class PlayerInfoComponent implements OnInit {
     .subscribe(players => this.players = players)
   }
 
-  playersEntered(name: string) {
-    this.playerInfoService.playersEntered(name);
+  playersInfo(name: any) {
+    this.playerInfoService.playersInfo(name);
   }
 
       
-    removePlayer(player) {
+    removePlayer(player: any) {
     this.playerInfoService.removePlayer(player);
   }
 }

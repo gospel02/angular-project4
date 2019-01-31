@@ -19,45 +19,24 @@ export class PlayerInfoService {
     return this.players.valueChanges();
       }
 
-    playersEntered(name: string){
+    playersInfo(name: any){
       let player = {
         name: name,
-        scoresOut: [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        scoresIn: [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
+        scoresOut: [],
+        scoresIn: []
       };
       this.players.doc(player.name).set(player).then(function (){
-        
-      } );
+        } );
     }
 
-    removePlayer(player){
+    removePlayer(player: any){
       this.players.doc(player.name).delete().then(function (){
 
       } );
 
     }
 
-    updatePlayerInfo(player){
+    updatePlayerInfo(player: any){
       this.players.doc(player.name).set(player);
     }
 }

@@ -42,13 +42,14 @@ export class CourseInfoComponent {
   loadCourseTees() {
     this.courseInfoService.loadCourseInfo().subscribe(data => {
       this.course = data['data'];
-      this.selectedTee = '1';
+      this.selectedTee = '2';
+      console.log(data);
     });
   }
 
  
 
-  outTotal(player){
+  outTotal(player: any){
     let sum = 0;
     for(let i = 0; i < 9; i++){
       sum += player[i];
@@ -60,12 +61,12 @@ export class CourseInfoComponent {
 
   }
 
-  saveScoresOut(player){
+  saveScoresOut(player: any){
     this.playerInfoService.updatePlayerInfo(player);
     
   }
 
-  inTotal(player){
+  inTotal(player: any){
     let sum = 0;
     for(let j = 0; j < 9; j++){
       sum += player[j];
@@ -77,11 +78,11 @@ export class CourseInfoComponent {
 
   }
 
-  saveScoresIn(player){
+  saveScoresIn(player: any){
     this.playerInfoService.updatePlayerInfo(player);
   }
 
- totalOut(player){
+ totalOut(player: any){
     let sum = 0;
     for(let i = 0; i < 9; i++){
       sum += player[i];
@@ -89,7 +90,7 @@ export class CourseInfoComponent {
     return sum;
   }
 
-  totalIn(player){
+  totalIn(player: any){
     let sum = 0;
     for(let j = 0; j < 9; j++){
       sum += player[j];

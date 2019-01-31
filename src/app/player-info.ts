@@ -1,5 +1,5 @@
 export interface PlayerInfo {
-    name: string;
+    name: any;
     scoresIn: Array<number>;
     scoresOut: Array<number>;
     
